@@ -47,7 +47,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
                         <a href="categorias.html" class="nav-item nav-link">Editar categoria</a>
                         <a href="productos.html" class="nav-item nav-link">Editar producto</a>
                         <a href="usuarios.html" class="nav-item nav-link">Editar usuarios</a>
@@ -63,7 +63,7 @@
                 <div class="row g-0 gx-5 align-items-end">
                     <div class="col-lg-6">
                         <div class="text-start mx-auto mb-5 wow slideInLeft" data-wow-delay="0.1s">
-                            <h1 class="mb-3">Productos</h1>
+                            <h1 class="mb-3">Editar categoria</h1>
                         </div>
                     </div>
                 </div>
@@ -71,48 +71,42 @@
                     <div id="tab-1" class="tab-pane fade show p-0 active">
 
                         <div class="row g-4">
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Electrodomestico</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href=""> Refrigerador </a>
-                                        <p>Amplio, 20L ahorrador</p>
-                                    </div>
-                                </div>
-                            </div>
+                           
+                            <form>
 
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Electrodomestico</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href=""> Refrigerador </a>
-                                        <p>Amplio, 20L ahorrador</p>
-                                    </div>
-                                </div>
-                            </div>
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="id_usuario" name="id_usuario">
+                                    <option selected>-- Seleccione --</option>
+                                    <option value="1">Electrodomestico</option>
+                                    <option value="2">Juguetes</option>
+                                    <option value="3">Farmacia</option>
+                                </select>
 
-                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href=""><img class="img-fluid" src="img/property-1.jpg" alt=""></a>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Electrodomestico</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">$12,345</h5>
-                                        <a class="d-block h5 mb-2" href=""> Refrigerador </a>
-                                        <p>Amplio, 20L ahorrador</p>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
+
                         </div>
+
+                        <div class="row g-4 mt-4">
+                           
+                            <form>
+
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripcion</label>
+                                    <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-block btn-lg mb-4">Guardar</button>
+                                        <button type="submit" class="btn btn-danger btn-block btn-lg mx-4 mb-4">Borrar</button>
+                                        <button type="submit" class="btn btn-secondary btn-block btn-lg mb-4">Nuevo</button>
+                                    </div>
+                                </div>
+
+                            </form>
 
                     </div>
                 </div>
