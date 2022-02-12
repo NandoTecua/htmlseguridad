@@ -21,17 +21,40 @@ descripcion VARCHAR(500) NOT NULL DEFAULT ''
 ) 
 
 
-INSERT INTO Usuarios (nombre, correo, estado) 
-VALUES ('Jose Luis Andrade Martinez', 'jolandm@gmail.com', 1),
-('Andrea Gonzalez Jimenez', 'andygj@gmail.com', 1),
-('Tomas Felix Diaz Santana', 'tommyfelix@hotmail.com', 1)
+INSERT INTO users (nombre, email) 
+VALUES ('Jose Luis Andrade Martinez', 'jolandm@gmail.com'),
+('Andrea Gonzalez Jimenez', 'andygj@gmail.com'),
+('Tomas Felix Diaz Santana', 'tommyfelix@hotmail.com');
 
-INSERT INTO Categorias (nombre, descripcion) 
+INSERT INTO categoria (nombre, descripcion) 
 VALUES ('Electrodomesticos', 'Productos que usan la electricidad para funcionar, se usan principalmente en la cocina'),
 ('Juguetes', 'Productos diseñados principalmente para niños y niñas.'),
-('Farmacia', 'Productos quimicos y drogas para ayudar a la persona con enfermedades.')
+('Farmacia', 'Productos quimicos y drogas para ayudar a la persona con enfermedades.');
 
-INSERT INTO Productos (nombre, descripcion, precio, imagen, categoria) 
-VALUES ('Refrigerador LG', '22 pies cubicos, doble puerta y congelador.', 20500.99, 'https://www.lg.com/mx/images/refrigeradores/MD07516355/des_14.jpg', 1),
-('Max Steel', 'Juguete de accion con una espada y boton de audio.', 425.50, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu5JCwAIKUs1MQLCa3jZSq3Co8QqT_3yLe1Q&usqp=CAU', 2),
-('Omeprazol', 'Medicina para el estomago. Contiene 30 capsulas', 385.87, 'https://www.sanborns.com.mx/imagenes-sanborns-ii/1200/7501277093472.jpg', 3)
+INSERT INTO productos (nombre, descripcion, precio) 
+VALUES ('Refrigerador LG', '22 pies cubicos, doble puerta y congelador.', 20500.99),
+('Max Steel', 'Juguete de accion con una espada y boton de audio.', 425.50),
+('Omeprazol', 'Medicina para el estomago. Contiene 30 capsulas', 385.87);
+
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE `categoria` (
+  `idCategoria` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(105) NOT NULL,
+  `descripcion` varchar(256) NOT NULL,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `productos` (
+  `idProducto` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `precio` float NOT NULL,
+  `descripcion` varchar(256) NOT NULL,
+  PRIMARY KEY (`idProducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `users` (
+  `idCliente` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(80) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`idCliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
